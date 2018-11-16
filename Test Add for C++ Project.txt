@@ -1,1 +1,23 @@
 Test Add for C++ Project
+
+
+Instructions:
+
+++ Clone git to computer
+- git clone git@github.com:georgemtt/C-Project-2018-.git
+
+++ View status
+- git status
+
+++ Add to repo
+- git add <filename>
+
+++ Add all to repo
+- git add . 
+
+++ Git commit
+- git commit
+
+++ Git commit all
+- git commit -a
+
