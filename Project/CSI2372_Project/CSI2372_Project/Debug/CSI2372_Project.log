@@ -1,0 +1,21 @@
+﻿  Player.cpp
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(12): error C3646: 'name': unknown override specifier
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(14): error C3646: 'stringSideOfBoard': unknown override specifier
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(22): error C2061: syntax error: identifier 'String'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(22): error C2535: 'Player::Player(void)': member function already defined or declared
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(21): note: see declaration of 'Player::Player'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(27): error C3646: 'getName': unknown override specifier
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(27): error C2059: syntax error: '('
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(27): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(30): error C2143: syntax error: missing ',' before '&'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.cpp(10): error C2236: unexpected token 'class'. Did you forget a ';'?
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.cpp(10): error C2011: 'Player': 'class' type redefinition
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\player.h(9): note: see declaration of 'Player'
+  Deck.cpp
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\csi2372_project\csi2372_project\deck.cpp(6): fatal error C1083: Cannot open include file: 'Deck.h': No such file or directory
+  CardDeck.cpp
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\csi2372_project\csi2372_project\carddeck.cpp(6): fatal error C1083: Cannot open include file: 'Deck.h': No such file or directory
+  Generating Code...
