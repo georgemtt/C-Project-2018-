@@ -3,6 +3,8 @@
 //George Agadah : 7405809
 
 //card header
+#include <string>
+
 #ifndef card_h
 #define card_h
 
@@ -16,11 +18,11 @@ class Card {
 
 	//class variables
 private:
-	String animal;
-	String background;
-	String row1;
-	String row2;
-	String row3;
+	std::string animal;
+	std::string background;
+	std::string row1;
+	std::string row2;
+	std::string row3;
 
 
 	//constructor(s)
@@ -47,9 +49,9 @@ private:
 
 public:
 	//method(s)
-	string getAnimal() { return animal; }
-	string getBackground() { return background; }
+	std::string getAnimal() { return animal; }
+	std::string getBackground() { return background; }
 
 
-}
+};
 #endif

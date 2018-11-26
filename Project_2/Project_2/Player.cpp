@@ -4,36 +4,21 @@
 
 //Player CPP
 
-#include "player.h"
+#include "Player.h"
+#include "Reward.h"
 
-	//constructors
-class Player {
-	Player() {
-		name = "";
-		active = false;
-		rubyCount = 0;
-	}
 
-	Player(String _name) {
-		name = _name;
-		active = false;
-		rubyCount = 0;
-	}
-
-	//to do
-	void addReward(const Reward&) {
-
+	void Player::addReward(Reward newReward) {
+		int temp = newReward.getReward();
+		setNRubies(temp);
 	}
 
 	//to do
 	void setDisplayMode(bool endOfGame) {
-	if (endOfGame){
-		
+		if (endOfGame) {
+
+		}
+		else {
+
+		}
 	}
-	
-	}
-	
-
-
-
-};
