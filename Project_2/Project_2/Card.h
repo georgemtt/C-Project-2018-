@@ -11,10 +11,11 @@
 
 
 class Card {
-
+public:
 	enum FaceAnimal { crab, penguin, octupus, turtle, walrus };
 
 	enum FaceBackground { red, green, purple, blue, yellow };
+
 
 	//class variables
 private:
@@ -51,6 +52,10 @@ public:
 	//method(s)
 	std::string getAnimal() { return animal; }
 	std::string getBackground() { return background; }
+	std::string getRow1() { return row1; }
+	std::string getRow2() { return row2; }
+	std::string getRow3() { return row3; }
+
 
 
 };

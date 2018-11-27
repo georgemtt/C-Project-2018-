@@ -6,19 +6,10 @@
 
 #include "Player.h"
 #include "Reward.h"
+#include <string>
 
 
 	void Player::addReward(Reward newReward) {
 		int temp = newReward.getReward();
 		setNRubies(temp);
-	}
-
-	//to do
-	void setDisplayMode(bool endOfGame) {
-		if (endOfGame) {
-
-		}
-		else {
-
-		}
 	}

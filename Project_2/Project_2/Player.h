@@ -19,6 +19,7 @@ private:
 	bool active;
 	int rubyCount;
 	Side side;
+	std::string printable;
 
 
 	//constructor(s)
@@ -27,6 +28,7 @@ private:
 		name = "";
 		active = false;
 		rubyCount = 0;
+		printable = "";
 	}
 
 	Player(std::string _name) {
@@ -40,11 +42,31 @@ public:
 	//method(s)
 	std::string getName() { return name; }
 	void setActive(bool _active) { active = _active; }
+	bool isActive() { return active; }
 	int getNRubies() { return rubyCount; }
 	void setNRubies(int moreRubies) { rubyCount += moreRubies; }
 	void addReward(Reward);
-	void setDisplayMode(bool endOfGame);
 	Side getSide(){ return side; }
 	void setSide(Side _side){ side = _side; }
+
+	//to do
+	void setDisplayMode(bool endOfGame) {
+		std::string sideString;
+		std::string activeStatus;
+		std::string rubiesString;
+		if (side == top) { sideString = "top"; }
+		if (side == bottom) { sideString = "bottom"; }
+		if (side == left) { sideString = "left"; }
+		if (side == right) { sideString = "right"; }
+		if (active) { activeStatus = "(active)"; }
+		if (!active) { activeStatus = "(not active)"; }
+			if (endOfGame) {
+				rubiesString = to_string(rubyCount);
+				printable = name + ": " + rubiesString + " rubies";
+			}
+			else {
+				printable = name + ": " + sideString + " " + activeStatus;
+			}
+	}
 };
 #endif

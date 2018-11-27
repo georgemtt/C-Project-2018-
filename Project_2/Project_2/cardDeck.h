@@ -9,9 +9,12 @@
 
 
 class CardDeck : public Deck<Card> {
+
+	friend Card;
+
 public:
 	//constructor
-	Card** cardList = new Card*[26];
+	Card** cardList = new *Card[26];
 
 	CardDeck() {
 		//first Animal, all colours
@@ -73,7 +76,7 @@ public:
 	}
 
 	bool isEmpty() {
-		if (cardList[0] != nullptr) { return true; }
-		else { return false; }
+		if (cardList[0] != nullptr) { return false; }
+		else { return true; }
 	}
 };

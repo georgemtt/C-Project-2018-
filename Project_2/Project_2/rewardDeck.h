@@ -9,12 +9,15 @@
 #include <algorithm>    // std::random_shuffle
 
 class RewardDeck : public Deck<Reward> {
+	friend Reward;
 public:
 	//constructor
-	Reward* rewardList = new Reward[8];
-
+	Reward* rewardList;
+	rewardList = new Reward[8];
+	
 	RewardDeck() {
 		//all rewards : (3@1pt, 2@2pt, 1@3pt, 1@4pt)
+		
 		rewardList[0] = new Reward(1);
 		rewardList[1] = new Reward(1);
 		rewardList[2] = new Reward(1);
@@ -53,7 +56,7 @@ public:
 	}
 
 	bool isEmpty() {
-		if (rewardList[0] != nullptr) { return true; }
-		else { return false; }
+		if (rewardList[0] != nullptr) { return false; }
+		else { return true; }
 	}
 };

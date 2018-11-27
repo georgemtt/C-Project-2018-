@@ -4,6 +4,7 @@
 
 
 #include <iostream> 
+
 using namespace std;
 //Reward header
 #ifndef reward_h
