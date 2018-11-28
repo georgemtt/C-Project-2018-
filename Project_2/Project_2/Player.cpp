@@ -13,3 +13,22 @@
 		int temp = newReward.getReward();
 		setNRubies(temp);
 	}
+
+	void Player::setDisplayMode(bool endOfGame) {
+		std::string sideString;
+		std::string activeStatus;
+		std::string rubiesString;
+		if (side == top) { sideString = "top"; }
+		if (side == bottom) { sideString = "bottom"; }
+		if (side == left) { sideString = "left"; }
+		if (side == right) { sideString = "right"; }
+		if (active) { activeStatus = "(active)"; }
+		if (!active) { activeStatus = "(not active)"; }
+		if (endOfGame) {
+			rubiesString = to_string(rubyCount);
+			printable = name + ": " + rubiesString + " rubies";
+		}
+		else {
+			printable = name + ": " + sideString + " " + activeStatus;
+		}
+	}

@@ -10,7 +10,7 @@
 #define player_h
 
 class Player {
-	
+public:
 	enum Side { top, bottom, left, right};
 	
 	//class variables
@@ -40,7 +40,7 @@ private:
 
 public:
 	//method(s)
-	std::string getName() { return name; }
+	std::string getName() const { return name; }
 	void setActive(bool _active) { active = _active; }
 	bool isActive() { return active; }
 	int getNRubies() { return rubyCount; }
@@ -48,25 +48,6 @@ public:
 	void addReward(Reward);
 	Side getSide(){ return side; }
 	void setSide(Side _side){ side = _side; }
-
-	//to do
-	void setDisplayMode(bool endOfGame) {
-		std::string sideString;
-		std::string activeStatus;
-		std::string rubiesString;
-		if (side == top) { sideString = "top"; }
-		if (side == bottom) { sideString = "bottom"; }
-		if (side == left) { sideString = "left"; }
-		if (side == right) { sideString = "right"; }
-		if (active) { activeStatus = "(active)"; }
-		if (!active) { activeStatus = "(not active)"; }
-			if (endOfGame) {
-				rubiesString = to_string(rubyCount);
-				printable = name + ": " + rubiesString + " rubies";
-			}
-			else {
-				printable = name + ": " + sideString + " " + activeStatus;
-			}
-	}
+	void setDisplayMode(bool endOfGame);
 };
 #endif

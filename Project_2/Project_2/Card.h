@@ -21,14 +21,11 @@ public:
 private:
 	std::string animal;
 	std::string background;
-	std::string row1;
-	std::string row2;
-	std::string row3;
+	std::string *row = new std::string[3];
 
 
 	//constructor(s)
 public:
-	Card();
 	Card(FaceAnimal fAnimal, FaceBackground fBackground) {
 		if (fAnimal == crab) { animal = "C"; }
 		else if (fAnimal == penguin) { animal = "P"; }
@@ -42,19 +39,18 @@ public:
 		else if (fBackground == blue) { background = "b"; }
 		else if (fBackground == yellow) { background = "y"; }
 
-		row1 = background + background + background;
-		row2 = background + animal + background;
-		row3 = background + background + background;
+		row[0] = background + background + background;
+		row[1] = background + animal + background;
+		row[2] = background + background + background;
 
 	}
 
 public:
 	//method(s)
-	std::string getAnimal() { return animal; }
-	std::string getBackground() { return background; }
-	std::string getRow1() { return row1; }
-	std::string getRow2() { return row2; }
-	std::string getRow3() { return row3; }
+	std::string getAnimal() const { return animal; }
+	std::string getBackground() const { return background; }
+	std::string getRowN(int n)  { return row[n-1]; }
+
 
 
 

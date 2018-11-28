@@ -10,9 +10,6 @@ using namespace std;
 #ifndef reward_h
 #define reward_h
 
-ostream& operator<<(ostream &os, const Reward& currentReward) {
-	return (os << currentReward.getReward();
-}
 class Reward {
 		
 	//class variables
@@ -35,13 +32,16 @@ public:
 public:
 	//method(s)
 	//get private value of reward
-	int getReward() { return reward; }
+	int getReward() const { return reward; }
 
-	//make reward printable by overriding the << operator
-	ostream& operator<<(ostream &os, const Reward& currentReward) { 
-    return (os << currentReward.reward;
-	}
+	
+
 	//Defined Cast
 	operator int() const { return reward; }
 };
 #endif
+
+//make reward printable by overriding the << operator
+ostream& operator<<(ostream &os, const Reward& currentReward) {
+	return (os << currentReward.getReward());
+}

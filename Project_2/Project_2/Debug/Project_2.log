@@ -1,0 +1,46 @@
+﻿  Game.cpp
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\reward.h(45): error C2084: function 'std::ostream &operator <<(std::ostream &,const Reward &)' already has a body
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\reward.h(45): note: see previous definition of '<<'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\rewarddeck.h(46): error C2039: 'random_suffle': is not a member of 'std'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\algorithm(23): note: see declaration of 'std'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\rewarddeck.h(46): error C3861: 'random_suffle': identifier not found
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(38): error C2953: 'Deck': class template has already been defined
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(13): note: see declaration of 'Deck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(11): error C2955: 'Deck': use of class template requires template argument list
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(13): note: see declaration of 'Deck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(67): error C2039: 'random_suffle': is not a member of 'std'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\algorithm(23): note: see declaration of 'std'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(67): error C3861: 'random_suffle': identifier not found
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(38): error C2953: 'Deck': class template has already been defined
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(13): note: see declaration of 'Deck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\rewarddeck.h(11): error C2011: 'RewardDeck': 'class' type redefinition
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\rewarddeck.h(11): note: see declaration of 'RewardDeck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(38): error C2953: 'Deck': class template has already been defined
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(13): note: see declaration of 'Deck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(11): error C2011: 'CardDeck': 'class' type redefinition
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(11): note: see declaration of 'CardDeck'
+  Player.cpp
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\reward.h(45): error C2084: function 'std::ostream &operator <<(std::ostream &,const Reward &)' already has a body
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\reward.h(45): note: see previous definition of '<<'
+  Rules.cpp
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\reward.h(45): error C2084: function 'std::ostream &operator <<(std::ostream &,const Reward &)' already has a body
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\reward.h(45): note: see previous definition of '<<'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\rewarddeck.h(46): error C2039: 'random_suffle': is not a member of 'std'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\algorithm(23): note: see declaration of 'std'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\rewarddeck.h(46): error C3861: 'random_suffle': identifier not found
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(38): error C2953: 'Deck': class template has already been defined
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(13): note: see declaration of 'Deck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(11): error C2955: 'Deck': use of class template requires template argument list
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(13): note: see declaration of 'Deck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(67): error C2039: 'random_suffle': is not a member of 'std'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\algorithm(23): note: see declaration of 'std'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(67): error C3861: 'random_suffle': identifier not found
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(38): error C2953: 'Deck': class template has already been defined
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(13): note: see declaration of 'Deck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\rewarddeck.h(11): error C2011: 'RewardDeck': 'class' type redefinition
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\rewarddeck.h(11): note: see declaration of 'RewardDeck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(38): error C2953: 'Deck': class template has already been defined
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\deck.h(13): note: see declaration of 'Deck'
+c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(11): error C2011: 'CardDeck': 'class' type redefinition
+  c:\users\dpuri\onedrive\documents\school\fifth year\fall\csi2372 - programming concepts with c++\project\project_2\project_2\project_2\carddeck.h(11): note: see declaration of 'CardDeck'
+  Generating Code...
