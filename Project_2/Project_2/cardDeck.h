@@ -15,8 +15,9 @@ class CardDeck : public Deck<Card> {
 public:
 	//constructor
 	Card** cardList = new Card*[26];
-
+	int listSize;
 	CardDeck() {
+		listSize = 26;
 		//first Animal, all colours
 		cardList[0] = new Card(Card::crab, Card::red);
 		cardList[1] = new Card(Card::crab, Card::green);

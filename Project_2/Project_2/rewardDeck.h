@@ -13,10 +13,11 @@ class RewardDeck : public Deck<Reward> {
 public:
 	//constructor
 	Reward** rewardList = new Reward*[8];
+	int listSize;
 	
 	RewardDeck() {
 		//all rewards : (3@1pt, 2@2pt, 1@3pt, 1@4pt)
-		
+		listSize = 8;
 		rewardList[0] = new Reward(1);
 		rewardList[1] = new Reward(1);
 		rewardList[2] = new Reward(1);
