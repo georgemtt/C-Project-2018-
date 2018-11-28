@@ -12,8 +12,7 @@ class RewardDeck : public Deck<Reward> {
 	friend Reward;
 public:
 	//constructor
-	Reward* rewardList;
-	rewardList = new Reward[8];
+	Reward** rewardList = new Reward*[8];
 	
 	RewardDeck() {
 		//all rewards : (3@1pt, 2@2pt, 1@3pt, 1@4pt)
@@ -26,7 +25,7 @@ public:
 		rewardList[5] = new Reward(3);
 		rewardList[6] = new Reward(4);
 		//Final null pointer
-		cardList[7] = nullptr;
+		rewardList[7] = nullptr;
 
 	}
 
@@ -34,12 +33,12 @@ public:
 
 
 	//
-	static RewardDeck& make_RewardDeck() {
+	RewardDeck& make_RewardDeck() {
 		//all rewards : (3@1pt, 2@2pt, 1@3pt, 1@4pt)
 
 		shuffle();
 
-		return this; //
+		return *this; //
 	}
 
 	void shuffle() {

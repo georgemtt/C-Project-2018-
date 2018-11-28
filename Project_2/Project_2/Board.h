@@ -23,7 +23,7 @@ class Board {
 
 	//class variables
 private:
-	std::string loopUpID;
+	std::string lookUpID;
 	RewardDeck *pointCards;
 	CardDeck *playCards;
 
@@ -34,8 +34,8 @@ private:
 	Board() {
 		pointCards = new RewardDeck();
 		playCards = new CardDeck();
-	//	(*pointCards).make_RewardDeck();	//Shuffle Decks
-	//	(*playCards).make_CardDeck();		//Shuffle Decks
+		//playCards->make_CardDeck();		//Shuffle Decks
+		//pointCards->make_RewardDeck();	//Shuffle Decks
 	
 			mapOfCards.insert(std::make_pair("A1",playCards->getNext()));
 			mapOfCards.insert(std::make_pair("A2", playCards->getNext()));
@@ -94,30 +94,119 @@ private:
 			mapOfCardFaceUp.insert(std::make_pair("E3", false));
 			mapOfCardFaceUp.insert(std::make_pair("E4", false));
 			mapOfCardFaceUp.insert(std::make_pair("E5", false));
-
 	}
 
 	
-
-
 public:
 	//method(s)
 	bool isFaceUp(const Letter& letterVal, const Number& numberVal) {
-		loopUpID = "";
-		if (letterVal == A) { loopUpID = "A"; }
-		else if (letterVal == B) { loopUpID = "B"; }
-		else if (letterVal == C) { loopUpID = "C"; }
-		else if (letterVal == D) { loopUpID = "D"; }
-		else if (letterVal == E) { loopUpID = "E"; }
-
-	
+		lookUpID = "";
+		if (letterVal == A) { lookUpID = "A"; }
+		else if (letterVal == B) { lookUpID = "B"; }
+		else if (letterVal == C) { lookUpID = "C"; }
+		else if (letterVal == D) { lookUpID = "D"; }
+		else if (letterVal == E) { lookUpID = "E"; }
+		if (numberVal == One) { lookUpID += "1"; }
+		else if (numberVal == Two) { lookUpID += "2"; }
+		else if (numberVal == Three) { lookUpID += "3"; }
+		else if (numberVal == Four) { lookUpID += "4"; }
+		else if (numberVal == Five) { lookUpID += "5"; }
+		bool faceUp = mapOfCardFaceUp[lookUpID];
+		return faceUp;
 	
 	}
-	bool turnFaceUp(const Letter&, const Number&);
-	bool turnFaceDown(const Letter&, const Number&);
-	Card* getCard(const Letter&, const Number&);
-	void setCard(const Letter&, const Number&, Card*);
-	void reset();
+
+	bool turnFaceUp(const Letter& letterVal, const Number& numberVal) {
+		lookUpID = "";
+		if (letterVal == A) { lookUpID = "A"; }
+		else if (letterVal == B) { lookUpID = "B"; }
+		else if (letterVal == C) { lookUpID = "C"; }
+		else if (letterVal == D) { lookUpID = "D"; }
+		else if (letterVal == E) { lookUpID = "E"; }
+		if (numberVal == One) { lookUpID += "1"; }
+		else if (numberVal == Two) { lookUpID += "2"; }
+		else if (numberVal == Three) { lookUpID += "3"; }
+		else if (numberVal == Four) { lookUpID += "4"; }
+		else if (numberVal == Five) { lookUpID += "5"; }
+		bool temp = mapOfCardFaceUp[lookUpID];
+		mapOfCardFaceUp[lookUpID] = true;
+		if (temp == true) { return false; }
+		else { return true; }
+	}
+
+	bool turnFaceDown(const Letter& letterVal, const Number& numberVal) {
+		lookUpID = "";
+		if (letterVal == A) { lookUpID = "A"; }
+		else if (letterVal == B) { lookUpID = "B"; }
+		else if (letterVal == C) { lookUpID = "C"; }
+		else if (letterVal == D) { lookUpID = "D"; }
+		else if (letterVal == E) { lookUpID = "E"; }
+		if (numberVal == One) { lookUpID += "1"; }
+		else if (numberVal == Two) { lookUpID += "2"; }
+		else if (numberVal == Three) { lookUpID += "3"; }
+		else if (numberVal == Four) { lookUpID += "4"; }
+		else if (numberVal == Five) { lookUpID += "5"; }
+		bool temp = mapOfCardFaceUp[lookUpID];
+		mapOfCardFaceUp[lookUpID] = false;
+		if (temp == false) { return false; }
+		else { return true; }
+	
+	}
+
+	Card* getCard(const Letter& letterVal, const Number& numberVal) {
+		lookUpID = "";
+		if (letterVal == A) { lookUpID = "A"; }
+		else if (letterVal == B) { lookUpID = "B"; }
+		else if (letterVal == C) { lookUpID = "C"; }
+		else if (letterVal == D) { lookUpID = "D"; }
+		else if (letterVal == E) { lookUpID = "E"; }
+		if (numberVal == One) { lookUpID += "1"; }
+		else if (numberVal == Two) { lookUpID += "2"; }
+		else if (numberVal == Three) { lookUpID += "3"; }
+		else if (numberVal == Four) { lookUpID += "4"; }
+		else if (numberVal == Five) { lookUpID += "5"; }
+		Card *wantedCard = mapOfCards[lookUpID];
+		return wantedCard;
+	}
+
+	void setCard(const Letter& letterVal, const Number& numberVal, Card* cardGiven) {
+		lookUpID = "";
+		if (letterVal == A) { lookUpID = "A"; }
+		else if (letterVal == B) { lookUpID = "B"; }
+		else if (letterVal == C) { lookUpID = "C"; }
+		else if (letterVal == D) { lookUpID = "D"; }
+		else if (letterVal == E) { lookUpID = "E"; }
+		if (numberVal == One) { lookUpID += "1"; }
+		else if (numberVal == Two) { lookUpID += "2"; }
+		else if (numberVal == Three) { lookUpID += "3"; }
+		else if (numberVal == Four) { lookUpID += "4"; }
+		else if (numberVal == Five) { lookUpID += "5"; }
+		mapOfCards[lookUpID] = cardGiven;
+	}
+
+	void reset() {
+		lookUpID = "";
+		for (int i = 1; i < 6; ++i) {
+			lookUpID = "A" + i;
+			mapOfCardFaceUp[lookUpID] = false;
+		}
+		for (int i = 1; i < 6; ++i) {
+			lookUpID = "B" + i;
+			mapOfCardFaceUp[lookUpID] = false;
+		}
+		mapOfCardFaceUp["C1"] = false;
+		mapOfCardFaceUp["C2"] = false;
+		mapOfCardFaceUp["C4"] = false;
+		mapOfCardFaceUp["C5"] = false;
+		for (int i = 1; i < 6; ++i) {
+			lookUpID = "D" + i;
+			mapOfCardFaceUp[lookUpID] = false;
+		}
+		for (int i = 1; i < 6; ++i) {
+			lookUpID = "A" + i;
+			mapOfCardFaceUp[lookUpID] = false;
+		}
+	}
 
 
 };

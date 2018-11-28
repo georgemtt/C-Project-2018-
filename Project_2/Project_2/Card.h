@@ -27,7 +27,7 @@ private:
 
 
 	//constructor(s)
-private:
+public:
 	Card();
 	Card(FaceAnimal fAnimal, FaceBackground fBackground) {
 		if (fAnimal == crab) { animal = "C"; }

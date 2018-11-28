@@ -21,7 +21,7 @@ private:
 	friend ostream& operator<<(ostream &os, const Reward& currentReward);
 
 	//constructor(s)
-private:
+public:
 	//empty constructor
 	Reward(){
 		reward = 0;
