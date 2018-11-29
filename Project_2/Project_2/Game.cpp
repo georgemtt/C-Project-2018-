@@ -42,7 +42,7 @@ Game::Game(bool _normalView) {
 	playerList[3] = nullptr;
 }
 
-void Game::addPlayer(const Player &playerGiven) {
+void Game::addPlayer( Player &playerGiven) {
 	//no players added yet
 	if (playerCount == 0) {
 		*currentPlayer = playerGiven;
@@ -89,16 +89,16 @@ Player& Game::getPlayer(Player::Side givenSide) {
 }
 
 
-void Game::setCurrentCard(const Card* givenCard) {
+void Game::setCurrentCard( Card* givenCard) {
 	previousCard = currentCard;
 	*currentCard = *givenCard;
 }
 
-Card* Game::getCard(const Board::Letter& givenLetter, const Board::Number& givenNumber) {
+Card* Game::getCard( Board::Letter& givenLetter,  Board::Number& givenNumber) {
 	return (currentBoard->getCard(givenLetter, givenNumber));
 }
 
-void Game::setCard(const Board::Letter& givenLetter, const Board::Number& givenNumber, Card* givenCard) {
+void Game::setCard( Board::Letter& givenLetter,  Board::Number& givenNumber, Card* givenCard) {
 	currentBoard->setCard(givenLetter, givenNumber, givenCard);
 }
 

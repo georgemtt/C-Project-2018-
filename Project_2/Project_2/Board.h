@@ -231,5 +231,6 @@ public:
 	Card* getCard(const Letter& letterVal, const Number& numberVal);
 	void setCard(const Letter& letterVal, const Number& numberVal, Card* cardGiven);
 	void reset();
+	Reward* getNextReward() { return pointCards->getNext(); }
 };
 #endif

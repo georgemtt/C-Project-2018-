@@ -10,6 +10,7 @@
 #define player_h
 
 class Player {
+	friend ostream& operator<<(ostream &os, const Player& currentPlayer);
 public:
 	enum Side { top, bottom, left, right};
 	
@@ -23,7 +24,7 @@ private:
 
 
 	//constructor(s)
-private:
+public:
 	Player() {
 		name = "";
 		active = false;
@@ -49,5 +50,6 @@ public:
 	Side getSide(){ return side; }
 	void setSide(Side _side){ side = _side; }
 	void setDisplayMode(bool endOfGame);
+	string getPrintable() const { return printable; }
 };
 #endif

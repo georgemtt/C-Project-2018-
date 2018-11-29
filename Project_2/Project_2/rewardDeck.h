@@ -52,7 +52,7 @@ public:
 			rewardList[i] = rewardList[i + 1];
 		}
 		rewardList[7] = temp;
-		return rewardList[0];
+		return temp;
 	}
 
 	bool isEmpty() {

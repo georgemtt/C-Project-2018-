@@ -32,3 +32,7 @@
 			printable = name + ": " + sideString + " " + activeStatus;
 		}
 	}
+	ostream& operator<<(ostream &os, const Player& currentPlayer) {
+
+		return os << (currentPlayer.getPrintable());
+	}

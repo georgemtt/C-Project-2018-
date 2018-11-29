@@ -41,16 +41,17 @@ public:
 		++roundCount;
 		currentBoard->reset();
 	}
-	void addPlayer(const Player &playerGiven);
+	void addPlayer( Player &playerGiven);
 	Player& getPlayer(Player::Side givenSide);
 	Player* getPlayerList(int givenListID) const { return playerList[givenListID]; }
 	const Card* getPreviousCard() const { return previousCard; }
 	const Card* getCurrentCard() const { return currentCard; }
-	void setCurrentCard(const Card*);
-	Card* getCard(const Board::Letter&, const Board::Number&);
-	void setCard(const Board::Letter&, const Board::Number&, Card*);
+	void setCurrentCard( Card*);
+	Card* getCard( Board::Letter&,  Board::Number&);
+	void setCard( Board::Letter&,  Board::Number&, Card*);
 	Board * getBoard() const { return currentBoard; }
 	int getPlayerCount() const { return playerCount; }
 	Player* getCurrentPlayer() const { return currentPlayer; }
+	void setCurrentPlayer(int n) {currentPlayer = playerList[n];}
 };
 #endif
