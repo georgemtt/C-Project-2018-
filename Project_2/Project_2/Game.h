@@ -37,7 +37,7 @@ public:
 public:
 	//method(s)
 	int getRound() const { return roundCount; }
-	int nextRound() {
+	void nextRound() {
 		++roundCount;
 		currentBoard->reset();
 	}

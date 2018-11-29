@@ -13,31 +13,31 @@
 #include <iostream>
 #include <string>
 using namespace std;
-bool normalMode = true;
-bool normalView = true;
-bool acceptableInput = false;
-bool firstMove = true;
-int numPlayers=0;
-int counter;
-Player *tempPlayer;
-Card *tempCard;
-Player::Side tempSide;
-Board::Letter tempLetter;
-Board::Number tempNumber;
-Board::Number one= Board::One;
-Board::Number two = Board::Two;
-Board::Number three = Board::Three;
-Board::Number four = Board::Four;
-Board::Number five = Board::Five;
-Board::Letter aLetter = Board::A;
-Board::Letter bLetter = Board::B;
-Board::Letter cLetter = Board::C;
-Board::Letter dLetter = Board::D;
-Board::Letter eLetter = Board::E;
-string userInput;
-Game *currentGame;
-Rules *currentRules;
-Player ** winnerList = new Player*[4];
+    bool normalMode = true;
+    bool normalView = true;
+    bool acceptableInput = false;
+    bool firstMove = true;
+    int numPlayers=0;
+    int counter;
+    Player *tempPlayer;
+    Card *tempCard;
+    Player::Side tempSide;
+    Board::Letter tempLetter;
+    Board::Number tempNumber;
+    Board::Number one= Board::One;
+    Board::Number two = Board::Two;
+    Board::Number three = Board::Three;
+    Board::Number four = Board::Four;
+    Board::Number five = Board::Five;
+    Board::Letter aLetter = Board::A;
+    Board::Letter bLetter = Board::B;
+    Board::Letter cLetter = Board::C;
+    Board::Letter dLetter = Board::D;
+    Board::Letter eLetter = Board::E;
+    string userInput;
+    Game *currentGame;
+    Rules *currentRules;
+    Player ** winnerList = new Player*[4];
 
 int main() {
 	//Get Rule Mode
@@ -239,7 +239,7 @@ int main() {
 				else {
 					tempCard = currentGame->getCard(tempLetter, tempNumber);
 					currentGame->setCurrentCard(tempCard);
-					if (!currentRules->isValid(currentGame)) { currentGame->getCurrentPlayer->setActive(false); }
+					if (!currentRules->isValid(currentGame)) { currentGame->getCurrentPlayer()->setActive(false); }
 					currentRules->getNextPlayer(currentGame);
 				}
 			cout << (currentGame->getBoard()) << endl;

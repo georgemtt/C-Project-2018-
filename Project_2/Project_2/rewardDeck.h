@@ -8,6 +8,9 @@
 #include "Reward.h"
 #include <algorithm>    // std::random_shuffle
 
+#ifndef deck_h
+#define deck_h
+
 class RewardDeck : public Deck<Reward> {
 	friend Reward;
 public:
@@ -43,7 +46,7 @@ public:
 	}
 
 	void shuffle() {
-		std::random_suffle(rewardList[0], rewardList[6]);
+		std::random_shuffle(rewardList[0], rewardList[6]);
 	}
 
 	Reward* getNext() {
@@ -60,3 +63,4 @@ public:
 		else { return true; }
 	}
 };
+#endif

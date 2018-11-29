@@ -39,9 +39,11 @@ public:
 	//Defined Cast
 	operator int() const { return reward; }
 };
-#endif
 
 //make reward printable by overriding the << operator
 ostream& operator<<(ostream &os, const Reward& currentReward) {
 	return (os << currentReward.getReward());
 }
+
+#endif
+

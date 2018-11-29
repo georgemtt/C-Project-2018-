@@ -7,6 +7,8 @@
 #include "Card.h"
 #include <algorithm>    // std::random_shuffle
 
+#ifndef carddeck_h
+#define carddeck_h
 
 class CardDeck : public Deck<Card> {
 
@@ -64,7 +66,7 @@ public:
 	}
 
 	void shuffle() {
-		std::random_suffle(cardList[0], cardList[24]);
+		std::random_shuffle(cardList[0], cardList[24]);
 	}
 
 	Card* getNext() {
@@ -81,3 +83,5 @@ public:
 		else { return true; }
 	}
 };
+
+#endif

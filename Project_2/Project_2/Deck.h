@@ -8,9 +8,12 @@
 #include <type_traits>
 #include "Reward.h"
 #include "Card.h"
+#include <iostream>
 
-template <typename C>
-class Deck {
+#ifndef rewarddeck_h
+#define rewarddeck_h
+
+template <class C> class Deck {
 	C** cList;
 	int listSize;
 public:
@@ -28,11 +31,9 @@ public:
 
 	//methods
 
-
 	virtual void shuffle() = 0;
-
-
 	virtual C* getNext() = 0;
-
 	virtual bool isEmpty() = 0;
 };
+
+#endif
