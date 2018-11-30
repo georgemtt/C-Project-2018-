@@ -10,8 +10,8 @@
 #include "Card.h"
 #include <iostream>
 
-#ifndef rewarddeck_h
-#define rewarddeck_h
+#ifndef deck_h
+#define deck_h
 
 //template class Deck<Card>;
 //template class Deck<Reward>;

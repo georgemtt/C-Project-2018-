@@ -42,10 +42,10 @@ Game::Game(bool _normalView) {
 	playerList[3] = nullptr;
 }
 
-void Game::addPlayer( Player &playerGiven) {
+void Game::addPlayer( Player *playerGiven) {
 	//no players added yet
 	if (playerCount == 0) {
-		*currentPlayer = playerGiven;
+		currentPlayer = playerGiven;
 		++playerCount;
 	}
 	else {
@@ -54,18 +54,18 @@ void Game::addPlayer( Player &playerGiven) {
 		//check if player is already in game
 		for (int i = 0; i < 4; ++i) {
 			if (playerList[i] != nullptr) {
-				if (playerList[i]->getName() == playerGiven.getName()) {
+				if (playerList[i]->getName() == playerGiven->getName()) {
 					exists = true;
 					x = i;
 				}
 			}
 		}
 		if (exists) { //player exists, update player
-			*playerList[x] = playerGiven;
+			playerList[x] = playerGiven;
 		}
 		else { //player doesnt exist, check if under 4
 			if (playerCount<4) {
-				*playerList[playerCount] = playerGiven;
+				playerList[playerCount] = playerGiven;
 				++playerCount;
 			}
 			else {

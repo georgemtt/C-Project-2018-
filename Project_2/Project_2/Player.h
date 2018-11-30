@@ -41,6 +41,7 @@ public:
 
 public:
 	//method(s)
+	void setName(string givenName){cout << "Before name set"<<endl;name=givenName;cout << "after"<<endl;}
 	std::string getName() const { return name; }
 	void setActive(bool _active) { active = _active; }
 	bool isActive() { return active; }

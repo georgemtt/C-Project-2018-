@@ -8,8 +8,8 @@
 #include "Reward.h"
 #include <algorithm>    // std::random_shuffle
 
-#ifndef deck_h
-#define deck_h
+#ifndef rewarddeck_h
+#define rewarddeck_h
 
 class RewardDeck : public Deck<Reward> {
 	friend Reward;

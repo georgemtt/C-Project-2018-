@@ -41,7 +41,7 @@ public:
 		++roundCount;
 		currentBoard->reset();
 	}
-	void addPlayer( Player &playerGiven);
+	void addPlayer( Player *playerGiven);
 	Player& getPlayer(Player::Side givenSide);
 	Player* getPlayerList(int givenListID) const { return playerList[givenListID]; }
 	const Card* getPreviousCard() const { return previousCard; }

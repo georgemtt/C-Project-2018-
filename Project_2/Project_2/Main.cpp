@@ -41,9 +41,13 @@ using namespace std;
     string userInput;
     Game *currentGame;
     Rules *currentRules;
+    Player ** userList = new Player*[4];
     Player ** winnerList = new Player*[4];
 
 int main() {
+
+
+
 	//Get Rule Mode
 	cout << "Please enter Game Rule Mode: [Normal,Expert] "<<endl;
 	while (!acceptableInput) {
@@ -112,7 +116,11 @@ int main() {
 	while(counter < numPlayers) {
         acceptableInput = false;
         cout << "Please enter name of Player[" << std::to_string(counter + 1) << "]: " << endl;
+        if (counter==0){cin.ignore();}
         while (!acceptableInput) {
+ //
+ //           cin >> userInput;
+
 			getline(cin,nameInput);
 
             cout << "User named Player[" << std::to_string(counter + 1) << "]: " << nameInput
@@ -120,30 +128,29 @@ int main() {
 
             getline(cin,userInput); //change from cin >> userInput
 
-            if (userInput == "Y") {
-                tempPlayer = new Player(nameInput);
-                if (counter == 0) { tempPlayer->setSide(Player::bottom); }
-                else if (counter == 1) { tempPlayer->setSide(Player::left); }
-                else if (counter == 2) { tempPlayer->setSide(Player::top); }
-                else if (counter == 3) { tempPlayer->setSide(Player::right); }
-                currentGame->addPlayer(*tempPlayer);
+            if ((userInput == "Y")||(userInput == "y")) {
+                userList[counter] = new Player(nameInput);
+                if (counter == 0) { userList[counter]->setSide(Player::bottom); }
+                else if (counter == 1) { userList[counter]->setSide(Player::left); }
+                else if (counter == 2) { userList[counter]->setSide(Player::top); }
+                else if (counter == 3) { userList[counter]->setSide(Player::right); }
+                currentGame->addPlayer(userList[0]);
                 acceptableInput = true;
-                ++counter;
+
             } else {
                 acceptableInput = false;
                 cout << "Okay, then please enter name of Player[" << std::to_string(counter + 1) << "] again: " << endl;
             }
         }
+        ++counter;
 
     }
-
-	
 	cout << "Game is now ready to be played, enjoy!!!" << endl;
 	cout << currentGame << endl;
 
 	//start the game!!!
 	while (!currentRules->gameOver(currentGame)) {
-		//cards are reset upon cunstruction as well as each new round call
+		//cards are reset upon construction as well as each new round call
 
 		//set all players active
 		for (int i = 0; i < numPlayers; ++i) {
