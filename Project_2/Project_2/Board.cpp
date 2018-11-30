@@ -12,26 +12,22 @@
 #include <iostream> 
 using namespace std;
 
-
-
-
-
-
-
-ostream& operator<<(ostream &os, const Board& currentBoard) {
-	if (normalView) {
+ostream& operator<<(ostream &os, const Board& currentBoard) { // Need to talk about this
+	if (currentBoard.normalView) {
 		for (int i = 0; i < 21; ++i) {
-			os << normalPrintMap[i] + "\n";
+			os << currentBoard.normalPrintMap[i] + "\n";
 		}
-		return os;
+
 	}
 
-	if (!normalView) {
+	if (!currentBoard.normalView) {
 		for (int i = 0; i < 5; ++i) {
-			os << expertPrintMap[i] + "\n";
+			os << currentBoard.expertPrintMap[i] + "\n";
 		}
-		return os;
+
 	}
+
+    return os;
 }
 
 bool Board::isFaceUp(const Letter& letterVal, const Number& numberVal) {
@@ -87,7 +83,7 @@ bool Board::turnFaceUp(const Letter& letterVal, const Number& numberVal) {
 	}
 	else if (numberVal == Three) { 
 		lookUpID += "3"; 
-		mapCountCol - 10;
+		mapCountCol = 10;
 	}
 	else if (numberVal == Four) { 
 		lookUpID += "4"; 
@@ -100,9 +96,9 @@ bool Board::turnFaceUp(const Letter& letterVal, const Number& numberVal) {
 	bool temp = mapOfCardFaceUp[lookUpID];
 	mapOfCardFaceUp[lookUpID] = true;
 	if (normalView) {
-		for (i = 0; i < 3; ++i) {
+		for (int i = 0; i < 3; ++i) {
 			row = tempCard->getRowN(i + 1);
-			normalPrintMap[mapCount + i]->replace(mapCountCol, 3, row);
+			normalPrintMap[mapCount + i].replace(mapCountCol, 3, row);
 		}
 	}
 	if (!normalView) {
@@ -145,7 +141,7 @@ bool Board::turnFaceDown(const Letter& letterVal, const Number& numberVal) {
 	}
 	else if (numberVal == Three) {
 		lookUpID += "3";
-		mapCountCol - 10;
+		mapCountCol = 10;
 	}
 	else if (numberVal == Four) {
 		lookUpID += "4";
@@ -159,8 +155,8 @@ bool Board::turnFaceDown(const Letter& letterVal, const Number& numberVal) {
 	mapOfCardFaceUp[lookUpID] = true;
 
 	if (normalView) {
-		for (i = 0; i < 3; ++i) {
-			normalPrintMap[mapCount + i]->replace(mapCountCol, 3, "zzz");
+		for (int i = 0; i < 3; ++i) {
+			normalPrintMap[mapCount + i].replace(mapCountCol, 3, "zzz");
 		}
 	}
 
@@ -206,11 +202,11 @@ void Board::setCard(const Letter& letterVal, const Number& numberVal, Card* card
 void Board::reset() {
 	lookUpID = "";
 	for (int i = 1; i < 6; ++i) {
-		lookUpID = "A" + i;
+		lookUpID = "A" + to_string(i);
 		mapOfCardFaceUp[lookUpID] = false;
 	}
 	for (int i = 1; i < 6; ++i) {
-		lookUpID = "B" + i;
+		lookUpID = "B" + to_string(i);
 		mapOfCardFaceUp[lookUpID] = false;
 	}
 	mapOfCardFaceUp["C1"] = false;
@@ -218,12 +214,14 @@ void Board::reset() {
 	mapOfCardFaceUp["C4"] = false;
 	mapOfCardFaceUp["C5"] = false;
 	for (int i = 1; i < 6; ++i) {
-		lookUpID = "D" + i;
+		lookUpID = "D" + to_string(i);
 		mapOfCardFaceUp[lookUpID] = false;
 	}
 	for (int i = 1; i < 6; ++i) {
-		lookUpID = "A" + i;
+		lookUpID = "A" + to_string(i);
 		mapOfCardFaceUp[lookUpID] = false;
 	}
 }
+
+
 

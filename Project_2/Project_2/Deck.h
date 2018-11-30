@@ -13,6 +13,9 @@
 #ifndef rewarddeck_h
 #define rewarddeck_h
 
+//template class Deck<Card>;
+//template class Deck<Reward>;
+
 template <class C> class Deck {
 	C** cList;
 	int listSize;

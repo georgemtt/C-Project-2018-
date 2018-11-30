@@ -107,4 +107,5 @@ ostream& operator<<(ostream &os, const Game& currentGame) {
 	for (int i = 0; i < currentGame.getPlayerCount(); ++i) {
 		os << currentGame.getPlayerList(i) << "\n";
 	}
+    return os;
 }

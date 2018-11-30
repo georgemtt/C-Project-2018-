@@ -19,15 +19,15 @@ using namespace std;
 #define board_h
 
 class Board {
+	friend ostream& operator<<(ostream &os, const Board& currentBoard);
 public:
 	enum Number { One, Two, Three, Four, Five };
 	enum Letter { A, B, C, D, E};
 
-	friend ostream& operator<<(ostream &os, const Board& currentBoard);
-
 	//class variables
 private:
 	std::string lookUpID;
+	int mapCount, mapCountCol;
 	RewardDeck *pointCards;
 	CardDeck *playCards;
 	bool normalView = true;

@@ -5,9 +5,13 @@
 //Main CPP
 
 #include "Game.h"
+#include "Game.cpp"
 #include "Rules.h"
+#include "Rules.cpp"
 #include "Player.h"
+#include "Player.cpp"
 #include "Board.h"
+#include "Board.cpp"
 #include "Card.h"
 
 #include <iostream>
@@ -105,27 +109,34 @@ int main() {
 	//Get Player Names
 	counter = 0;
 	string nameInput;
-	while(counter<numPlayers)
-	acceptableInput = false;
-	cout << "Please enter name of Player["<<std::to_string(counter+1)<<"]: " << endl;
-	while (!acceptableInput) {
-		cin >> nameInput;
-		
-		cout<<"User named Player[" << std::to_string(counter + 1) << "]: "<< nameInput <<", is this acceptable: [Y,N]" << endl;
-	 if (userInput == "Y") {
-		 tempPlayer = new Player(nameInput);
-		 if (counter == 0) {tempPlayer->setSide(Player::bottom);}
-		 else if (counter == 1){ tempPlayer->setSide(Player::left); }
-		 else if (counter == 2) { tempPlayer->setSide(Player::top); }
-		 else if (counter == 3) { tempPlayer->setSide(Player::right); }
-		 currentGame->addPlayer(*tempPlayer);
-	acceptableInput = true;
-		}
-	else {
-	acceptableInput = false;
-	cout << "Okay, then please enter name of Player[" << std::to_string(counter + 1) << "] again: " << endl;
-		}
-	}
+	while(counter < numPlayers) {
+        acceptableInput = false;
+        cout << "Please enter name of Player[" << std::to_string(counter + 1) << "]: " << endl;
+        while (!acceptableInput) {
+			getline(cin,nameInput);
+
+            cout << "User named Player[" << std::to_string(counter + 1) << "]: " << nameInput
+                 << ", is this acceptable: [Y,N]" << endl;
+
+            getline(cin,userInput); //change from cin >> userInput
+
+            if (userInput == "Y") {
+                tempPlayer = new Player(nameInput);
+                if (counter == 0) { tempPlayer->setSide(Player::bottom); }
+                else if (counter == 1) { tempPlayer->setSide(Player::left); }
+                else if (counter == 2) { tempPlayer->setSide(Player::top); }
+                else if (counter == 3) { tempPlayer->setSide(Player::right); }
+                currentGame->addPlayer(*tempPlayer);
+                acceptableInput = true;
+                ++counter;
+            } else {
+                acceptableInput = false;
+                cout << "Okay, then please enter name of Player[" << std::to_string(counter + 1) << "] again: " << endl;
+            }
+        }
+
+    }
+
 	
 	cout << "Game is now ready to be played, enjoy!!!" << endl;
 	cout << currentGame << endl;

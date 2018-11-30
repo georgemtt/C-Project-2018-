@@ -78,7 +78,7 @@ const Player& Rules::getNextPlayer(const Game& givenGame) {
 		else {
 			next = current + 1;
 		}
-		return (*givenGame.getPlayerList(next));
+		// return (*givenGame.getPlayerList(next));
 	}
 
 	//Expert Rules
@@ -86,5 +86,8 @@ const Player& Rules::getNextPlayer(const Game& givenGame) {
 
 
 	}
+
+    return (*givenGame.getPlayerList(next));
+
 }
 
